@@ -1,0 +1,303 @@
+/* Global Reset */
+* {
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #2b2b2b; /* Dark grey background */
+    font-family: cursive, sans-serif;
+    font-weight: 600;
+    color: #fff; /* Default text color white */
+    overflow: hidden;
+    animation: blur 0.5s ease-out;
+}
+
+/* Title Container */
+#title_container {
+    width: 100%;
+    height: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Dark grey */
+    border-bottom: 2px solid #555; /* Subtle grey border */
+    box-shadow: 0 0 30px -18px #222; /* Soft shadow */
+}
+
+#title {
+    color: #fff; /* White text */
+    font-size: 55px;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+/* Join Container */
+#join_container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+#join_inner_container {
+    width: 50%;
+    height: 100%;
+}
+
+/* Join Input */
+#join_input_container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#join_input {
+    width: 60%;
+    height: 40px;
+    color: #fff; /* White text */
+    font-family: 'Varela Round', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    border-bottom: 2px dashed #ccc; /* Light grey dashed border */
+}
+
+#join_input:focus {
+    box-shadow: 0 10px 30px -17px #00ff00; /* Green focus effect */
+}
+
+/* Join Button */
+#join_button_container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#join_button {
+    width: 60%;
+    height: 40px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff; /* White text */
+    background-color: transparent;
+    border: 2px solid #ccc; /* Light grey border */
+    transition: 0.3s ease;
+}
+
+#join_button:hover {
+    background-color: #333; /* Slight hover effect */
+}
+
+/* Chat Container */
+#chat_container {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    animation: fadeIn 1s linear;
+}
+
+#chat_inner_container {
+    width: 40%;
+    height: 100%;
+}
+
+/* Chat Content */
+#chat_content_container {
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Varela Round', sans-serif;
+    color: #fff; /* White text for chat */
+}
+
+/* Chat Input Container */
+#chat_input_container {
+    width: 100%;
+    height: 10%;
+    border-bottom: 2px dashed #555; /* Subtle grey dashed border */
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Varela Round', sans-serif;
+    margin-top: 10px;
+    background-color: transparent;
+}
+
+/* Chat Input */
+#chat_input {
+    width: 95%;
+    height: 100%;
+    background-color: transparent;
+    color: #00ff00; /* Green text for input */
+    font-size: 16px;
+}
+
+/* Send Button */
+#chat_input_send {
+    width: 5%;
+    height: 100%;
+    font-size: 18px;
+    background-color: transparent;
+    text-align: right;
+    color: #fff; /* White text */
+}
+
+#chat_input_send.enabled {
+    color: #00ff00; /* Green for active button */
+    cursor: pointer;
+}
+
+/* Logout Button */
+#chat_logout_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#chat_logout {
+    color: #1d0000; /* Light grey logout text */
+    cursor: pointer;
+}
+
+#chat_logout:hover {
+    text-decoration: underline;
+}
+
+/* Message Container */
+.message_container {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.message_inner_container {
+    width: 100%;
+    color: #fff; /* White message text */
+}
+
+/* Message User */
+.message_user_container {
+    width: 100%;
+    display: inline-block;
+}
+
+.message_user {
+    font-weight: bold;
+    font-size: 14px;
+    color: #00ff00; /* Green for username */
+}
+
+/* Message Content */
+.message_content_container {
+    width: 100%;
+    display: inline-block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.message_content {
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #bbb; /* Light grey message content */
+}
+
+/* Button Styling */
+.enabled {
+    transition: background-color 0.5s;
+    color: #1d1d1d;
+    background-color: #00ff00; /* Bright green for active buttons */
+    cursor: pointer;
+}
+
+/* Title Animation on Chat */
+#title_container.chat_title_container {
+    transition: 0.8s ease-in-out;
+    height: 100px;
+}
+
+#title.chat_title {
+    transition: 0.8s;
+    font-size: 47px;
+}
+
+/* Loader Animation */
+.loader_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    border-top: 6px solid #333;
+    border-bottom: 6px solid #000;
+    border-left: 6px solid #00ff00; /* Green spinner */
+    border-right: 6px solid #00ff00; /* Green spinner */
+}
+
+/* FadeIn Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Blur Effect */
+@keyframes blur {
+    0% {
+        filter: blur(5px);
+    }
+    100% {
+        filter: blur(0);
+    }
+}
+
+/* Selection Styling */
+::selection {
+    background-color: #444; /* Darker selection background */
+    color: #fff; /* White text on selection */
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #555; /* Dark grey track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #222; /* Dark grey scrollbar handle */
+    border-radius: 5px;
+}
